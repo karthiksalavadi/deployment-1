@@ -13,7 +13,7 @@ phases:
       - IMAGE_TAG=${COMMIT_HASH:=latest}
       - CLUSTER=stage
       - DEPLOYMENT=promotions-api-2
-      - DEPLOYMENT_NS=promotions-api
+      - DEPLOYMENT_NS=promotions-api-qa
       - CONFIG_MAP=promotions-api
       - ZONE_REGION=us-east-2b
       - DEPLOYMENT_MANIFEST_NAME=deployment.yaml
@@ -21,7 +21,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo Building the GMS Docker image...
+      - echo Building the promotions-api Docker image...
       - env > .env
       - docker build -f deploy/Dockerfile -t $REPOSITORY_URI:latest .
       - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
