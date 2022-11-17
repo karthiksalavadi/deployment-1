@@ -17,7 +17,6 @@ phases:
       - CONFIG_MAP=promotions-api
       - ZONE_REGION=us-east-2b
       - DEPLOYMENT_MANIFEST_NAME=deployment.yaml
-
   build:
     commands:
       - echo Build started on `date`
