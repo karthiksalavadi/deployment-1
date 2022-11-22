@@ -34,5 +34,5 @@ phases:
      - printf '{"cluster":"%s", "imageUri":"%s", "deployment":"%s", "deploymentNS":"%s", "celeryUri":"%s", "configMap":"%s", "zoneRegion":"%s", "deploymentManifestName":"%s"}' $CLUSTER $REPOSITORY_URI:$IMAGE_TAG $DEPLOYMENT $DEPLOYMENT_NS $CELERY_REPOSITORY_URI:$IMAGE_TAG $CONFIG_MAP $ZONE_REGION $DEPLOYMENT_MANIFEST_NAME > image-definitions.json
 artifacts:
   files:
-    - image-definitions.json
-    - deploy/deployment.yaml
+     - image-definitions.json
+     - deploy/deployment.yaml
